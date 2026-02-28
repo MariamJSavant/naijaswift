@@ -1,7 +1,6 @@
 package com.naijaswift.service;
 
 import java.math.BigDecimal;
-
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,6 +20,8 @@ public class UserService{
       private final UserRepository userRepository;
       private final UserMapper userMapper;
       private final BCryptPasswordEncoder passwordEncoder;
+      
+      
 
       @Transactional
       public void registerUser(UserRegistrationDTO dto){
@@ -43,4 +44,6 @@ public class UserService{
         userRepository.save(user);
         
       }
+
+     
 }
